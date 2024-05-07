@@ -14,15 +14,16 @@ databaseConnection();
 
 app.use(cors());
 
-const _dirname = path.dirname("")
-const buildPath = path.join(_dirname  , "../../client/build");
+// Serve static files from the React build directory
+const buildPath = path.join(__dirname, "..", "..", "client", "dist");
+app.use(express.static(buildPath));
 
-app.use(express.static(buildPath))
+app.use(routes);
 
-app.get("/*", function(req, res){
+app.get("*", function(req, res){
 
     res.sendFile(
-        path.join(__dirname, "../../client/build/index.html"),
+      path.join(buildPath, "index.html"),
         function (err) {
           if (err) {
             res.status(500).send(err);
@@ -39,6 +40,6 @@ app.use(morgan("dev"));
 app.set("view engine", "ejs")
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(routes);
+
 
 module.exports = app;
