@@ -1,6 +1,7 @@
 // import { useState } from "react"
 import CallService from "./CallService"
 import Connection from "./Connection"
+import ImageStream from "./ImageStream"
 import RobotState from "./RobotState"
 import Teleoperation from "./Teleoperation"
 
@@ -17,6 +18,7 @@ const Body = () => {
         <Teleoperation />
         <RobotState />
         <CallService />
+        <ImageStream />
     </div>
   )
 }
