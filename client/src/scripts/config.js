@@ -1,5 +1,6 @@
 const Config = {
-    ROSBRIDGE_SERVER_IP: "[fc94:b376:aa06:24af:52b8:62c2:d295:1be1]", // VPN test ip address
+    // ROSBRIDGE_SERVER_IP: "[fc94:b376:aa06:24af:52b8:62c2:d295:1be1]", // VPN test ip address
+    ROSBRIDGE_SERVER_IP: "app.compusence.com",
     // ROSBRIDGE_SERVER_IP: "localhost",
     // ROSBRIDGE_SERVER_IP: "abdxi",
     // ROSBRIDGE_SERVER_IP: "192.168.1.102", // Abdelrahman device ip address
